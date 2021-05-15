@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Andorinha Airlines</title>
 </head>
 <body>
-    
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "bf0b9c15-8b29-47f0-b9f7-d4a0a77875ed", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "6fc0d167-6750-436d-8088-c497330430ea", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+          };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+          document.head.appendChild(t);
+        });
+      </script>
 </body>
 </html>

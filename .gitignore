@@ -106,6 +106,7 @@ celerybeat.pid
 .venv
 env/
 venv/
+venv_watson/
 ENV/
 env.bak/
 venv.bak/
@@ -127,3 +128,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Watson API keys
+watson_api_key.cfg

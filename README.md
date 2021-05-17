@@ -74,9 +74,9 @@ A figura abaixo apresenta o fluxo de diálogo base para o chatbot desenvolvido.
 # Métricas
 [Voltar ao topo](#índice)
 
-A extração de logs das sessões (conversas) do assistente virtual é um fator essencial para a curadoria e manutenção do bom funcionamento de um chatbot. Para tanto a IBM permite a extração dessas informações por meio de uma [API Python]().
+A extração de logs das sessões (conversas) do assistente virtual é um fator essencial para a curadoria e manutenção do bom funcionamento de um chatbot. Para tanto a IBM permite a extração dessas informações por meio de uma [API Python](https://cloud.ibm.com/apidocs/assistant/assistant-v1).
 
-O arquivo Jupyter Notebook ['docs/metricas_watson_assistant.ipynb']() exemplifica a extração dos logs por meio da API e a construção das seguintes métricas:
+O arquivo Jupyter Notebook ['docs/metricas_watson_assistant.ipynb'](docs/metricas_watson_assistant.ipynb) exemplifica a extração dos logs por meio da API e a construção das seguintes métricas:
 
  - Número total de conversas
  - Número total de conversas por dia

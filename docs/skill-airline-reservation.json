@@ -1,0 +1,5055 @@
+{
+  "intents": [
+    {
+      "intent": "consultar_destinos",
+      "examples": [
+        {
+          "text": "cidades disponiveis"
+        },
+        {
+          "text": "destinos"
+        },
+        {
+          "text": "destinos disponiveis"
+        },
+        {
+          "text": "quais os destinos disponíveis?"
+        },
+        {
+          "text": "quais voos"
+        },
+        {
+          "text": "quais voos tem"
+        },
+        {
+          "text": "voos disponiveis"
+        }
+      ],
+      "description": "Consultar destinos disponíveis"
+    },
+    {
+      "intent": "consultar_precos",
+      "examples": [
+        {
+          "text": "preços"
+        },
+        {
+          "text": "quais os precos"
+        },
+        {
+          "text": "quanto custam os voos?"
+        },
+        {
+          "text": "tabela preços"
+        }
+      ],
+      "description": "Consulta a tabela de preços"
+    },
+    {
+      "intent": "consultar_previsao",
+      "examples": [
+        {
+          "text": "previsao"
+        },
+        {
+          "text": "previsao do tempo"
+        },
+        {
+          "text": "quero saber a previsao do tempo"
+        },
+        {
+          "text": "quero ver a previsao"
+        }
+      ],
+      "description": "Consultar previsao do tempo"
+    },
+    {
+      "intent": "pagar_boleto",
+      "examples": [
+        {
+          "text": "boletao"
+        },
+        {
+          "text": "boletão"
+        },
+        {
+          "text": "boleto"
+        },
+        {
+          "text": "boleto pfv"
+        },
+        {
+          "text": "quero pagar no boleto"
+        }
+      ],
+      "description": "Pagamento reserva no boleto"
+    },
+    {
+      "intent": "pagar_credito",
+      "examples": [
+        {
+          "text": "credito"
+        },
+        {
+          "text": "pagamento no cartao de credito"
+        },
+        {
+          "text": "pagar no credito"
+        },
+        {
+          "text": "quero pagar no cedito"
+        },
+        {
+          "text": "quero pagar no credito"
+        }
+      ],
+      "description": "Pagar reserva no cartao de credito"
+    },
+    {
+      "intent": "pagar_debito",
+      "examples": [
+        {
+          "text": "a vista"
+        },
+        {
+          "text": "cartao debito"
+        },
+        {
+          "text": "debito"
+        },
+        {
+          "text": "debito a vista"
+        },
+        {
+          "text": "pagamento no cartao de debito"
+        },
+        {
+          "text": "quero pagar no debito"
+        }
+      ],
+      "description": "Pagamento no debito"
+    },
+    {
+      "intent": "pagar_pix",
+      "examples": [
+        {
+          "text": "pagar com pix"
+        },
+        {
+          "text": "pagar no pix"
+        },
+        {
+          "text": "pix"
+        },
+        {
+          "text": "quero fazer um pix"
+        },
+        {
+          "text": "transferencia"
+        }
+      ],
+      "description": "Pagamento reserva usando transferência Pix"
+    },
+    {
+      "intent": "reservar_voo",
+      "examples": [
+        {
+          "text": "comprar"
+        },
+        {
+          "text": "comprar passagem"
+        },
+        {
+          "text": "me ajuda a comprar passagem"
+        },
+        {
+          "text": "me ajuda a reservar"
+        },
+        {
+          "text": "nova reserva"
+        },
+        {
+          "text": "quero comprar uma passagem"
+        },
+        {
+          "text": "quero reservar uma passagem"
+        },
+        {
+          "text": "quero reservar um voo"
+        },
+        {
+          "text": "reservar"
+        },
+        {
+          "text": "reserva um voo ai pfv"
+        }
+      ],
+      "description": "Fazer reserva de voo"
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "fala"
+        },
+        {
+          "text": "fala, tranquilo?!"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "oiiii"
+        },
+        {
+          "text": "oi, tudo bem?!"
+        },
+        {
+          "text": "ola"
+        },
+        {
+          "text": "olá, tudo bem?"
+        },
+        {
+          "text": "opa"
+        },
+        {
+          "text": "opa, beleza?"
+        }
+      ],
+      "description": "Saudação"
+    },
+    {
+      "intent": "transferir_atendente",
+      "examples": [
+        {
+          "text": "atendente"
+        },
+        {
+          "text": "falar com uma pessoa"
+        },
+        {
+          "text": "human"
+        },
+        {
+          "text": "passa pra alguem"
+        },
+        {
+          "text": "passa pra atendente"
+        },
+        {
+          "text": "passo pra alguem ai"
+        },
+        {
+          "text": "quero falar com um atendente"
+        },
+        {
+          "text": "quero falar com um humano"
+        },
+        {
+          "text": "uma atendente"
+        },
+        {
+          "text": "um atendente"
+        }
+      ],
+      "description": "Transferir usuário para atendimento humano. "
+    }
+  ],
+  "entities": [
+    {
+      "entity": "cidade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Curitiba",
+          "synonyms": [
+            "coritbia",
+            "coritiba",
+            "cubitira",
+            "curiba",
+            "curita",
+            "cutiba",
+            "cwb",
+            "parana",
+            "pinhais",
+            "pr"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Florianópolis",
+          "synonyms": [
+            "catarina",
+            "fln",
+            "flonopsh",
+            "flonopx",
+            "florianopolis",
+            "floripa",
+            "fpolis",
+            "ilha",
+            "ilha da magia",
+            "santa catarina",
+            "sc"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Porto Alegre",
+          "synonyms": [
+            "alegre",
+            "pa",
+            "poa",
+            "portinho",
+            "porto",
+            "porto alegre",
+            "rio grande",
+            "rs"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "confirmacao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Não",
+          "synonyms": [
+            "n",
+            "nao",
+            "nao cara",
+            "nao é esse",
+            "nao quero",
+            "negativo",
+            "nem",
+            "nope",
+            "outro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sim",
+          "synonyms": [
+            "aham",
+            "beleza",
+            "blz",
+            "certo",
+            "confirma",
+            "exatamente",
+            "exato",
+            "fechou",
+            "feshow",
+            "isso",
+            "isso ai",
+            "positivo",
+            "s",
+            "show",
+            "show de bola",
+            "sim",
+            "tá certo",
+            "uhum",
+            "y",
+            "yes"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://us-south.functions.cloud.ibm.com/api/v1/namespaces/marcusboeno%40gmail.com_dev/actions/quote_call?blocking=true",
+      "name": "main_webhook",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Basic MjBkM2RmMDYtMTc3NS00NTBmLWE5MWItZjc1NDUyOTcxMWQ1OmZjekYxak5aQTVVdVd1dWVPemhnSmg3ckE2V2ZnSVV5RnZzN0pmSjBocFVBeWtzNTB4OWpVMmlUcDdrWUl2OGs="
+        }
+      ]
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá, seja bem-vindo à Andorinha Airlines! Sou o Lucca, seu assistente virtual para reservas de passagens aéreas. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Nova Reserva",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem! Obrigado por escolher a Andorinha Airlines!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#reservar_voo",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "Bem-vindo",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Boleto",
+      "parent": "node_4_1620694040438",
+      "context": {
+        "pagamento": "Boleto"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1620696985630"
+      },
+      "conditions": "#pagar_boleto",
+      "dialog_node": "node_10_1620696890476"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1620951417824",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_10_1620951509006"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620953966343",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1620258689682"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_10_1620953966350"
+    },
+    {
+      "type": "standard",
+      "title": "Confirma Partida Florianópolis",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você sairá de <strong>Florianópolis</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620255165284",
+      "conditions": "@cidade:Florianópolis",
+      "dialog_node": "node_11_1620693164403",
+      "previous_sibling": "node_9_1620255631150"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_9_1620953966343",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_11_1620953966350",
+      "previous_sibling": "node_10_1620953966350"
+    },
+    {
+      "type": "standard",
+      "title": "Data inválida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não é possível agendar voo para a data informada! Deseja tentar outra data?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620684001505",
+      "conditions": "anything_else",
+      "dialog_node": "node_1_1620684110772",
+      "previous_sibling": "node_45_1620956201116"
+    },
+    {
+      "type": "standard",
+      "title": "Mudanças no pedido",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos reiniciar o pedido então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1620684081031",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620255165284"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_1_1620685115178",
+      "previous_sibling": "node_4_1620685094903"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620255165284",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_1_1620952811218",
+      "previous_sibling": "node_21_1620693499661"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620257027053",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_1_1620953780676",
+      "previous_sibling": "node_5_1620258689682"
+    },
+    {
+      "type": "standard",
+      "title": "Define Local da Previsão",
+      "output": {
+        "generic": [
+          {
+            "title": "Deseja consultar a previsão do tempo para qual dos nossos destinos?!",
+            "options": [
+              {
+                "label": "Curitiba",
+                "value": {
+                  "input": {
+                    "text": "curitiba"
+                  }
+                }
+              },
+              {
+                "label": "Florianópolis",
+                "value": {
+                  "input": {
+                    "text": "florianopolis"
+                  }
+                }
+              },
+              {
+                "label": "Porto Alegre",
+                "value": {
+                  "input": {
+                    "text": "porto alegre"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_7_1620688305967",
+      "conditions": "true",
+      "dialog_node": "node_1_1621029885523"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1621029885523",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_1_1621030066117",
+      "previous_sibling": "node_4_1621039697351"
+    },
+    {
+      "type": "standard",
+      "title": "Previsão para Florianópolis",
+      "output": {},
+      "parent": "node_1_1621029885523",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "action": "previsao_floripa"
+          },
+          "result_variable": "webhook_result_3"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "@cidade:Florianópolis",
+      "dialog_node": "node_1_1621039642267",
+      "previous_sibling": "node_6_1621030019271"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN] Mensagem de confirmação de partida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, confirmada sua saída de <strong>Florianópolis</strong>! "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_11_1620693164403",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_13_1620693164404"
+      },
+      "dialog_node": "node_12_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620953966343",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620953966343"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_12_1620953966350",
+      "previous_sibling": "node_11_1620953966350"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN] Indica Destinos",
+      "output": {
+        "generic": [
+          {
+            "title": "Qual o seu destino?!",
+            "options": [
+              {
+                "label": "Curitiba",
+                "value": {
+                  "input": {
+                    "text": "curitiba"
+                  }
+                }
+              },
+              {
+                "label": "Porto Alegre",
+                "value": {
+                  "input": {
+                    "text": "porto alegre"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_11_1620693164403",
+      "context": {
+        "partida": "Florianópolis"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_13_1620693164404",
+      "previous_sibling": "node_12_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620255631150",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_13_1620954085287",
+      "previous_sibling": "node_8_1620257485804"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN] Confirma Destino Curitiba",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você irá para <strong>Curitiba</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_13_1620693164404",
+      "conditions": "@cidade:Curitiba",
+      "dialog_node": "node_14_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_13_1620954085287",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620255631150"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_14_1620954085295"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN-CWB] Indica Itinerário",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, itinerário confirmado como <strong>$partida</strong> até <strong>$destino</strong>!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_14_1620693164404",
+      "context": {
+        "destino": "Curitiba"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_15_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_13_1620954085287",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_15_1620954085295",
+      "previous_sibling": "node_14_1620954085295"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN-CWB] Repete Coleta Destino",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo então."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_14_1620693164404",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_13_1620693164404"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_16_1620693164404",
+      "previous_sibling": "node_15_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_13_1620954085287",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_13_1620954085287"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_16_1620954085295",
+      "previous_sibling": "node_15_1620954085295"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN] Confirma Destino Porto Alegre",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você irá para <strong>Porto Alegre</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_13_1620693164404",
+      "conditions": "@cidade:(Porto Alegre)",
+      "dialog_node": "node_17_1620693164404",
+      "previous_sibling": "node_14_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_11_1620693164403",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_17_1620955106490",
+      "previous_sibling": "node_20_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN-POA] Indica Itinerário",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, itinerário confirmado como <strong>$partida</strong> até <strong>$destino</strong>!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1620693164404",
+      "context": {
+        "destino": "Porto Alegre"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_18_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1620955106490",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_11_1620693164403"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_18_1620955106503"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB-POA] Repete Coleta Destino",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo então."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1620693164404",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_13_1620693164404"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_19_1620693164404",
+      "previous_sibling": "node_18_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_17_1620955106490",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_19_1620955106503",
+      "previous_sibling": "node_18_1620955106503"
+    },
+    {
+      "type": "standard",
+      "title": "[FLN] Repete Coleta Ponto Partida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_11_1620693164403",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620255165284"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_20_1620693164404",
+      "previous_sibling": "node_13_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1620955106490",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_17_1620955106490"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_20_1620955106503",
+      "previous_sibling": "node_19_1620955106503"
+    },
+    {
+      "type": "standard",
+      "title": "Confirma Partida Porto Alegre",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você sairá de <strong>Porto Alegre</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620255165284",
+      "conditions": "@cidade:(Porto Alegre)",
+      "dialog_node": "node_21_1620693499661",
+      "previous_sibling": "node_11_1620693164403"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_13_1620693164404",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_21_1620955173849",
+      "previous_sibling": "node_17_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "Define Data do Voo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual a data da sua partida?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Em outros casos",
+      "conditions": "true",
+      "dialog_node": "node_2_1620684001505",
+      "previous_sibling": "node_7_1620255165284"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não consegui entender, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620255165284",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620255165284"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_2_1620693708348",
+      "previous_sibling": "node_1_1620952811218"
+    },
+    {
+      "type": "standard",
+      "title": "Nome do Passageiro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, estamos chegamos ao final! Preciso apenas confirmar alguns dados para finalizarmos a reserva. Qual o nome do passageiro?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620695544385",
+      "conditions": "true",
+      "dialog_node": "node_2_1620694755874"
+    },
+    {
+      "type": "standard",
+      "title": "Contato (Email)",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok $nome, qual o seu email de contato?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620695544385",
+      "context": {},
+      "conditions": "true",
+      "dialog_node": "node_2_1620694940690",
+      "previous_sibling": "node_2_1620694755874"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_4_1620951417824",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_2_1620951576747",
+      "previous_sibling": "node_10_1620951509006"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620952811218",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620255165284"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_2_1620952811219"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620953780676",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620257027053"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_2_1620953780682"
+    },
+    {
+      "type": "standard",
+      "title": "Continuar atendimento?!",
+      "output": {
+        "generic": [
+          {
+            "title": "Deseja continuar o atendimento?!",
+            "options": [
+              {
+                "label": "Sim",
+                "value": {
+                  "input": {
+                    "text": "sim"
+                  }
+                }
+              },
+              {
+                "label": "Não",
+                "value": {
+                  "input": {
+                    "text": "nao"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1620698378386",
+      "conditions": "true",
+      "dialog_node": "node_2_1620957430998"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1621030066117",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1621029885523"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_2_1621030066120"
+    },
+    {
+      "type": "standard",
+      "title": "[POA] Mensagem de confirmação de partida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, confirmada sua saída de <strong>Porto Alegre</strong>! "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_21_1620693499661",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_23_1620693499663"
+      },
+      "dialog_node": "node_22_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_21_1620955173849",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_13_1620693164404"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_22_1620955173858"
+    },
+    {
+      "type": "standard",
+      "title": "[POA] Indica Destinos",
+      "output": {
+        "generic": [
+          {
+            "title": "Qual o seu destino?!",
+            "options": [
+              {
+                "label": "Curitiba",
+                "value": {
+                  "input": {
+                    "text": "curitiba"
+                  }
+                }
+              },
+              {
+                "label": "Florianópolis",
+                "value": {
+                  "input": {
+                    "text": "florianopolis"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_21_1620693499661",
+      "context": {
+        "partida": "Porto Alegre"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_23_1620693499663",
+      "previous_sibling": "node_22_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_21_1620955173849",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_23_1620955173858",
+      "previous_sibling": "node_22_1620955173858"
+    },
+    {
+      "type": "standard",
+      "title": "[POA] Confirma Destino Curitiba",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você irá para <strong>Curitiba</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_23_1620693499663",
+      "conditions": "@cidade:Curitiba",
+      "dialog_node": "node_24_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_21_1620955173849",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_21_1620955173849"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_24_1620955173858",
+      "previous_sibling": "node_23_1620955173858"
+    },
+    {
+      "type": "standard",
+      "title": "[POA-CWB] Indica Itinerário",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, itinerário confirmado como <strong>$partida</strong> até <strong>$destino</strong>!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_24_1620693499663",
+      "context": {
+        "destino": "Curitiba"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_25_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_14_1620693164404",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_25_1620955229554",
+      "previous_sibling": "node_16_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "[POA-CWB] Repete Coleta Destino",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo então."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_24_1620693499663",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_23_1620693499663"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_26_1620693499663",
+      "previous_sibling": "node_25_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_25_1620955229554",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_14_1620693164404"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_26_1620955229562"
+    },
+    {
+      "type": "standard",
+      "title": "[POA] Confirma Destino Florianópolis",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você irá para <strong>Florianópolis</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_23_1620693499663",
+      "conditions": "@cidade:Florianópolis",
+      "dialog_node": "node_27_1620693499663",
+      "previous_sibling": "node_24_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_25_1620955229554",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_27_1620955229562",
+      "previous_sibling": "node_26_1620955229562"
+    },
+    {
+      "type": "standard",
+      "title": "[POA-FLN] Indica Itinerário",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, itinerário confirmado como <strong>$partida</strong> até <strong>$destino</strong>!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_27_1620693499663",
+      "context": {
+        "destino": "Florianópolis"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_28_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_25_1620955229554",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_25_1620955229554"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_28_1620955229562",
+      "previous_sibling": "node_27_1620955229562"
+    },
+    {
+      "type": "standard",
+      "title": "[POA-FLN] Repete Coleta Destino",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo então."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_27_1620693499663",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_23_1620693499663"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_29_1620693499663",
+      "previous_sibling": "node_28_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1620693164404",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_29_1620955277823",
+      "previous_sibling": "node_19_1620693164404"
+    },
+    {
+      "type": "standard",
+      "title": "[POA] Repete Coleta Ponto Partida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_21_1620693499661",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620255165284"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_30_1620693499663",
+      "previous_sibling": "node_23_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_29_1620955277823",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_17_1620693164404"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_30_1620955277827"
+    },
+    {
+      "type": "standard",
+      "title": "Cartão de Crédito",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1620694040438",
+      "context": {
+        "pagamento": "Cartão de Crédito"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1620696985630"
+      },
+      "conditions": "#pagar_credito",
+      "dialog_node": "node_31_1620697041756",
+      "previous_sibling": "node_10_1620696890476"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_29_1620955277823",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_31_1620955277827",
+      "previous_sibling": "node_30_1620955277827"
+    },
+    {
+      "type": "standard",
+      "title": "Consultar Tabela de Preços",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Trabalhamos com tarifa única de <strong>R$ 200,00</strong> por pessoa, com direito a <strong>bagagem de mão e despacho de uma bagagem de até 15 kg</strong>. Bagagens adicionais tem custo de R$ 90,00/unidade."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "#consultar_precos",
+      "dialog_node": "node_3_1620252226799",
+      "previous_sibling": "node_9_1620252198032"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB] Mensagem de confirmação de partida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, confirmada sua saída de <strong>Curitiba</strong>! "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620255631150",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620257027053"
+      },
+      "dialog_node": "node_3_1620258580756"
+    },
+    {
+      "type": "standard",
+      "title": "Confirma email",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_6_1620695010595",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1620694040438"
+      },
+      "conditions": "$mail",
+      "dialog_node": "node_3_1620696282825"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_1_1620952811218",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_3_1620952811219",
+      "previous_sibling": "node_2_1620952811219"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_1_1620953780676",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_3_1620953780683",
+      "previous_sibling": "node_2_1620953780682"
+    },
+    {
+      "type": "standard",
+      "title": "Encerra atendimento",
+      "parent": "node_2_1620957430998",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "action": "quote"
+          },
+          "result_variable": "webhook_result_2"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_3_1620957612528",
+      "previous_sibling": "node_7_1620957569811"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_1_1621030066117",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_3_1621030066120",
+      "previous_sibling": "node_2_1621030066120"
+    },
+    {
+      "type": "standard",
+      "title": "Cartão de Débito",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1620694040438",
+      "context": {
+        "pagamento": "Cartão de Débito"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1620696985630"
+      },
+      "conditions": "#pagar_debito",
+      "dialog_node": "node_32_1620697058695",
+      "previous_sibling": "node_31_1620697041756"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_29_1620955277823",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_29_1620955277823"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_32_1620955277827",
+      "previous_sibling": "node_31_1620955277827"
+    },
+    {
+      "type": "standard",
+      "title": "Pix",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1620694040438",
+      "context": {
+        "pagamento": "Transferência Pix"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1620696985630"
+      },
+      "conditions": "#pagar_pix",
+      "dialog_node": "node_33_1620697081253",
+      "previous_sibling": "node_32_1620697058695"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_21_1620693499661",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_33_1620955519115",
+      "previous_sibling": "node_30_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_33_1620955519115",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_21_1620693499661"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_34_1620955519121"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_33_1620955519115",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_35_1620955519121",
+      "previous_sibling": "node_34_1620955519121"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_33_1620955519115",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_33_1620955519115"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_36_1620955519121",
+      "previous_sibling": "node_35_1620955519121"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_24_1620693499663",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_37_1620955575093",
+      "previous_sibling": "node_26_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_37_1620955575093",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_24_1620693499663"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_38_1620955575098"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_37_1620955575093",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_39_1620955575098",
+      "previous_sibling": "node_38_1620955575098"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_37_1620955575093",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_37_1620955575093"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_40_1620955575098",
+      "previous_sibling": "node_39_1620955575098"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_27_1620693499663",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_41_1620955631750",
+      "previous_sibling": "node_29_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Oi, eu sou o Lucca! Muito obrigado por escolher a Andorinha Airlines!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "node_4_1620252577597",
+      "previous_sibling": "node_7_1620688305967"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB-FLN] Repete Coleta Destino",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo então."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620257874453",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620257027053"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_4_1620258035834",
+      "previous_sibling": "node_5_1620257965464"
+    },
+    {
+      "type": "standard",
+      "title": "Confirma data e fecha pedido",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_8_1620684081031",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620695544385"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_4_1620685094903"
+    },
+    {
+      "type": "standard",
+      "title": "Define Forma de Pagamento",
+      "output": {
+        "generic": [
+          {
+            "title": "Certo, para finalizarmos a reserva, qual seria a forma de pagamento?!",
+            "options": [
+              {
+                "label": "Crédito",
+                "value": {
+                  "input": {
+                    "text": "credito"
+                  }
+                }
+              },
+              {
+                "label": "Débito",
+                "value": {
+                  "input": {
+                    "text": "debito"
+                  }
+                }
+              },
+              {
+                "label": "Boleto",
+                "value": {
+                  "input": {
+                    "text": "boleto"
+                  }
+                }
+              },
+              {
+                "label": "Pix",
+                "value": {
+                  "input": {
+                    "text": "pix"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Em outros casos",
+      "conditions": "true",
+      "dialog_node": "node_4_1620694040438",
+      "previous_sibling": "node_9_1620695544385"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620254137993",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_4_1620951417824",
+      "previous_sibling": "node_5_1620252459169"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620952811218",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1620952811218"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_4_1620952811219",
+      "previous_sibling": "node_3_1620952811219"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620953780676",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1620953780676"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_4_1620953780683",
+      "previous_sibling": "node_3_1620953780683"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não consegui entender, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1620694040438",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1620694040438"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_4_1620956680701",
+      "previous_sibling": "node_57_1620956609935"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620255631150",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620255631150"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_4_1620958235743",
+      "previous_sibling": "node_13_1620954085287"
+    },
+    {
+      "type": "standard",
+      "title": "Retornar ao \"menu principal\"",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar ao início então ..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620684110772",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_4_1620959162947",
+      "previous_sibling": "node_5_1620958142264"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1621030066117",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1621030066117"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_4_1621030066120",
+      "previous_sibling": "node_3_1621030066120"
+    },
+    {
+      "type": "standard",
+      "title": "Previsão para Porto Alegre",
+      "output": {},
+      "parent": "node_1_1621029885523",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "action": "previsao_poa"
+          },
+          "result_variable": "webhook_result_3"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "@cidade:(Porto Alegre)",
+      "dialog_node": "node_4_1621039697351",
+      "previous_sibling": "node_1_1621039642267"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_41_1620955631750",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_27_1620693499663"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_42_1620955631755"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_41_1620955631750",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_43_1620955631755",
+      "previous_sibling": "node_42_1620955631755"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_41_1620955631750",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_41_1620955631750"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_44_1620955631755",
+      "previous_sibling": "node_43_1620955631755"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620684001505",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_45_1620956201116",
+      "previous_sibling": "node_8_1620684081031"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_45_1620956201116",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_46_1620956201121"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_45_1620956201116",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_47_1620956201121",
+      "previous_sibling": "node_46_1620956201121"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_45_1620956201116",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_45_1620956201116"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_48_1620956201121",
+      "previous_sibling": "node_47_1620956201121"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1620684081031",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_49_1620956265385",
+      "previous_sibling": "node_1_1620685115178"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_49_1620956265385",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1620684081031"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_50_1620956265387"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_49_1620956265385",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_51_1620956265387",
+      "previous_sibling": "node_50_1620956265387"
+    },
+    {
+      "type": "standard",
+      "title": "Registra opção de serviço",
+      "parent": "node_7_1620254137993",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "true",
+      "dialog_node": "node_5_1620252459169"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB-FLN] Indica Itinerário",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, itinerário confirmado como <strong>$partida</strong> até <strong>$destino</strong>!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620257874453",
+      "context": {
+        "destino": "Florianópolis"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_5_1620257965464"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB] Confirma Destino Porto Alegre",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você irá para <strong>Porto Alegre</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620257027053",
+      "conditions": "@cidade:(Porto Alegre)",
+      "dialog_node": "node_5_1620258689682",
+      "previous_sibling": "node_7_1620257874453"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620257874453",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_5_1620953884708",
+      "previous_sibling": "node_4_1620258035834"
+    },
+    {
+      "type": "standard",
+      "title": "Tentar outra data",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo então"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620684110772",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_5_1620958142264"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não consegui entender, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620684110772",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1620684110772"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_5_1620958184344",
+      "previous_sibling": "node_4_1620959162947"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não consegui entender, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1621029885523",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1621029885523"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_5_1621030120097",
+      "previous_sibling": "node_1_1621030066117"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_49_1620956265385",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_49_1620956265385"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_52_1620956265387",
+      "previous_sibling": "node_51_1620956265387"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620694940690",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_53_1620956405285"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_53_1620956405285",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620694940690"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_54_1620956405292"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_53_1620956405285",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_55_1620956405292",
+      "previous_sibling": "node_54_1620956405292"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_53_1620956405285",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_53_1620956405285"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_56_1620956405292",
+      "previous_sibling": "node_55_1620956405292"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1620694040438",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_57_1620956609935",
+      "previous_sibling": "node_33_1620697081253"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_57_1620956609935",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1620694040438"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_58_1620956609943"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_57_1620956609935",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_59_1620956609943",
+      "previous_sibling": "node_58_1620956609943"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_57_1620956609935",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_57_1620956609935"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_60_1620956609943",
+      "previous_sibling": "node_59_1620956609943"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1620696985630",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_61_1620956791794",
+      "previous_sibling": "node_6_1620698378386"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB-POA] Indica Itinerário",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, itinerário confirmado como <strong>Curitiba</strong> até <strong>Porto Alegre</strong>!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1620258689682",
+      "context": {
+        "destino": "Porto Alegre"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620684001505"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_6_1620258689687"
+    },
+    {
+      "type": "standard",
+      "title": "Coleta email",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_2_1620694940690",
+      "context": {
+        "mail": "<? input.text.extract('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\\.[a-zA-Z]+){1,}',0) ?>"
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_6_1620695010595",
+      "previous_sibling": "node_53_1620956405285"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmação da Reserva",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem! <br>Você confirma a seguinte reserva?!<br>\n<ul>\n    <li>Passageiro: $nome</li>\n    <li>Email: $mail</li>\n    <li>De: $partida</li>\n    <li>Para: $destino</li>\n    <li>Data: $data (08h00)</li>\n    <li>Preço: R$ 200,00</li>\n    <li>Forma Pagamento: $pagamento</li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Em outros casos",
+      "conditions": "true",
+      "dialog_node": "node_6_1620696985630",
+      "previous_sibling": "node_4_1620694040438"
+    },
+    {
+      "type": "standard",
+      "title": "Reserva confirmada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Reserva $id_reserva confirmada! Os detalhes de pagamento serão enviados para $mail. Muito obrigado pela preferência. Voe bem, Voe Andorinha!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1620696985630",
+      "context": {
+        "id_reserva": "#<?new Random().nextInt(100)?>"
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_6_1620698378386"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1620953884708",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620257874453"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_6_1620953884715"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não consegui entender, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1620696985630",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1620696985630"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_6_1620956829034",
+      "previous_sibling": "node_61_1620956791794"
+    },
+    {
+      "type": "standard",
+      "title": "Previsão para Curitiba",
+      "parent": "node_1_1621029885523",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "action": "previsao_curitiba"
+          },
+          "result_variable": "webhook_result_3"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "@cidade:Curitiba",
+      "dialog_node": "node_6_1621030019271"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_61_1620956791794",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1620696985630"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_62_1620956791795"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_61_1620956791794",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_63_1620956791795",
+      "previous_sibling": "node_62_1620956791795"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_61_1620956791794",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_61_1620956791794"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_64_1620956791795",
+      "previous_sibling": "node_63_1620956791795"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620694755874",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_65_1620956878557"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_65_1620956878557",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620694755874"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_66_1620956878559"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_65_1620956878557",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_67_1620956878559",
+      "previous_sibling": "node_66_1620956878559"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_65_1620956878557",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_65_1620956878557"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_68_1620956878559",
+      "previous_sibling": "node_67_1620956878559"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620957430998",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_69_1620957741399",
+      "previous_sibling": "node_3_1620957612528"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_69_1620957741399",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620957430998"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_70_1620957741407"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_69_1620957741399",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_71_1620957741407",
+      "previous_sibling": "node_70_1620957741407"
+    },
+    {
+      "type": "standard",
+      "title": "Oferecimento de Serviços",
+      "output": {
+        "generic": [
+          {
+            "title": "Em que posso lhe ajudar?!",
+            "options": [
+              {
+                "label": "Nova Reserva",
+                "value": {
+                  "input": {
+                    "text": "nova reserva"
+                  }
+                }
+              },
+              {
+                "label": "Consultar Destinos",
+                "value": {
+                  "input": {
+                    "text": "voos disponiveis"
+                  }
+                }
+              },
+              {
+                "label": "Tabela de Preços",
+                "value": {
+                  "input": {
+                    "text": "tabela preços"
+                  }
+                }
+              },
+              {
+                "label": "Previsão do Tempo",
+                "value": {
+                  "input": {
+                    "text": "previsao do tempo"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "true",
+      "dialog_node": "node_7_1620254137993"
+    },
+    {
+      "type": "standard",
+      "title": "Define Itinerário",
+      "output": {
+        "generic": [
+          {
+            "title": "Qual o seu ponto de partida?! Temos as seguintes opções:",
+            "options": [
+              {
+                "label": "Curitiba",
+                "value": {
+                  "input": {
+                    "text": "curitiba"
+                  }
+                }
+              },
+              {
+                "label": "Florianópolis",
+                "value": {
+                  "input": {
+                    "text": "florianopolis"
+                  }
+                }
+              },
+              {
+                "label": "Porto Alegre",
+                "value": {
+                  "input": {
+                    "text": "porto alegre"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Em outros casos",
+      "context": {},
+      "conditions": "true",
+      "dialog_node": "node_7_1620255165284"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB] Confirma Destino Florianópolis",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você irá para <strong>Florianópolis</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620257027053",
+      "conditions": "@cidade:Florianópolis",
+      "dialog_node": "node_7_1620257874453"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB-POA] Repete Coleta Destino",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo então."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1620258689682",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620257027053"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_7_1620258689688",
+      "previous_sibling": "node_6_1620258689687"
+    },
+    {
+      "type": "standard",
+      "title": "Previsão do Tempo",
+      "output": {
+        "generic": []
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1621029885523"
+      },
+      "conditions": "#consultar_trecho_livro",
+      "dialog_node": "node_7_1620688305967",
+      "previous_sibling": "node_3_1620252226799"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_5_1620953884708",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_7_1620953884715",
+      "previous_sibling": "node_6_1620953884715"
+    },
+    {
+      "type": "standard",
+      "title": "Retorna ao \"menu principal\"",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, vamos lá!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620957430998",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_7_1620957569811"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_69_1620957741399",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_69_1620957741399"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_72_1620957741407",
+      "previous_sibling": "node_71_1620957741407"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_11_1620693164403",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_11_1620693164403"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_73_1620958296229",
+      "previous_sibling": "node_17_1620955106490"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_21_1620693499661",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_21_1620693499661"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_74_1620958327313",
+      "previous_sibling": "node_33_1620955519115"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_23_1620693499663",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_23_1620693499663"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_75_1620958368752",
+      "previous_sibling": "node_76_1620958430107"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_23_1620693499663",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_76_1620958430107",
+      "previous_sibling": "node_27_1620693499663"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário ficará no Bot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok, vamos retornar um passo então!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_76_1620958430107",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_23_1620693499663"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_77_1620958430109"
+    },
+    {
+      "type": "standard",
+      "title": "Usuário não ficará no bot",
+      "output": {
+        "generic": [
+          {
+            "response_type": "connect_to_agent",
+            "transfer_info": {
+              "target": {}
+            },
+            "agent_available": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            },
+            "agent_unavailable": {
+              "message": "Ok, vou lhe transferir para um de nossos atendentes então, aguarde um momento. Obrigado pela preferência. Voe bem, Voe Andorinha!"
+            }
+          }
+        ]
+      },
+      "parent": "node_76_1620958430107",
+      "context": {
+        "transbordo": true
+      },
+      "conditions": "#transferir_atendente || @confirmacao:Não",
+      "dialog_node": "node_78_1620958430109",
+      "previous_sibling": "node_77_1620958430109"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_76_1620958430107",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_76_1620958430107"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_79_1620958430109",
+      "previous_sibling": "node_78_1620958430109"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_13_1620693164404",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_13_1620693164404"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_80_1620958479822",
+      "previous_sibling": "node_21_1620955173849"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620257027053",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620257027053"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_81_1620958569491",
+      "previous_sibling": "node_1_1620953780676"
+    },
+    {
+      "type": "standard",
+      "title": "Input fora do domínio",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Acho que não posso lhe ajudar com isso. Ainda estou aprendendo e consigo apenas administrar suas reservas com a Andorinha Airlines. Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_8_1620252759376",
+      "previous_sibling": "node_4_1620252577597"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB] Repete Coleta Ponto Partida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, vamos retornar um passo."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1620255631150",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620255165284"
+      },
+      "conditions": "@confirmacao:Não",
+      "dialog_node": "node_8_1620257485804",
+      "previous_sibling": "node_9_1620257027053"
+    },
+    {
+      "type": "standard",
+      "title": "Data de Partida Válida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem, no dia <strong><? @sys-date.reformatDateTime('dd/MM/yyyy') ?></strong> o voo entre <strong>$partida</strong> e <strong>$destino</strong> está previsto para as 08h00. Você confirma o voo?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620684001505",
+      "context": {
+        "data": "<? @sys-date.reformatDateTime('dd/MM/yyyy') ?>"
+      },
+      "conditions": "@sys-date.after(today())",
+      "dialog_node": "node_8_1620684081031"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1620953884708",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1620953884708"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_8_1620953884715",
+      "previous_sibling": "node_7_1620953884715"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620257874453",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620257874453"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_83_1620958649325",
+      "previous_sibling": "node_5_1620953884708"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1620258689682",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1620258689682"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_84_1620958668491",
+      "previous_sibling": "node_9_1620953966343"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_14_1620693164404",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_14_1620693164404"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_85_1620958719148",
+      "previous_sibling": "node_25_1620955229554"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1620693164404",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_17_1620693164404"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_86_1620958747368",
+      "previous_sibling": "node_29_1620955277823"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_24_1620693499663",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_24_1620693499663"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_87_1620958798367",
+      "previous_sibling": "node_37_1620955575093"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não entendi muito bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_27_1620693499663",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_27_1620693499663"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_88_1620958829170",
+      "previous_sibling": "node_41_1620955631750"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não consegui entender, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1620684081031",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1620684081031"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_89_1620958891323",
+      "previous_sibling": "node_49_1620956265385"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Poxa, não consegui entender, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620957430998",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620957430998"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_90_1620958984455",
+      "previous_sibling": "node_69_1620957741399"
+    },
+    {
+      "type": "standard",
+      "title": "Consultar Destinos Disponíveis",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A Andorinha Airlines opera na região sul do Brasil, realizando voos diários entre as três capitais, <strong>Curitiba (CWB)</strong>, <strong>Florianópolis (FLN)</strong> e <strong>Porto Alegre (POA)</strong>."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620254137993"
+      },
+      "conditions": "#consultar_destinos",
+      "dialog_node": "node_9_1620252198032",
+      "previous_sibling": "Em outros casos"
+    },
+    {
+      "type": "standard",
+      "title": "Confirma Partida Curitiba",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, você sairá de <strong>Curitiba</strong> então?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620255165284",
+      "conditions": "@cidade:Curitiba",
+      "dialog_node": "node_9_1620255631150"
+    },
+    {
+      "type": "standard",
+      "title": "[CWB] Indica Destinos",
+      "output": {
+        "generic": [
+          {
+            "title": "Qual o seu destino?!",
+            "options": [
+              {
+                "label": "Florianópolis",
+                "value": {
+                  "input": {
+                    "text": "florianopolis"
+                  }
+                }
+              },
+              {
+                "label": "Porto Alegre",
+                "value": {
+                  "input": {
+                    "text": "porto alegre"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1620255631150",
+      "context": {
+        "partida": "Curitiba"
+      },
+      "conditions": "@confirmacao:Sim",
+      "dialog_node": "node_9_1620257027053",
+      "previous_sibling": "node_3_1620258580756"
+    },
+    {
+      "type": "standard",
+      "title": "Informações do Passageiro",
+      "output": {
+        "generic": []
+      },
+      "parent": "Em outros casos",
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "dialog_node": "node_9_1620695544385",
+      "previous_sibling": "node_2_1620684001505"
+    },
+    {
+      "type": "standard",
+      "title": "Coleta nome do passageiro",
+      "parent": "node_2_1620694755874",
+      "context": {
+        "nome": "<?input.text?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620694940690"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_9_1620696157396",
+      "previous_sibling": "node_65_1620956878557"
+    },
+    {
+      "type": "standard",
+      "title": "Repete Email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Email inválido!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1620695010595",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1620694940690"
+      },
+      "conditions": "true",
+      "dialog_node": "node_9_1620696335352",
+      "previous_sibling": "node_3_1620696282825"
+    },
+    {
+      "type": "standard",
+      "title": "Resposta não identificada",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não entendi muito bem, você poderia repetir?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1620951417824",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1620951417824"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_9_1620951668861",
+      "previous_sibling": "node_2_1620951576747"
+    },
+    {
+      "type": "standard",
+      "title": "Conferência de transbordo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Caso queira entrar em contato com um(a) atendente humano(a) digite \"atendente\". Mas tente mais uma vez comigo, quero muito poder lhe ajudar! Posso tentar lhe ajudar?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1620258689682",
+      "conditions": "#transferir_atendente",
+      "dialog_node": "node_9_1620953966343",
+      "previous_sibling": "node_7_1620258689688"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1620252459169",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1620951417824"
+      },
+      "conditions": "#transferir_atendente",
+      "dialog_node": "response_1_1620951389638",
+      "previous_sibling": "response_5_1620687694963"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<br><br><em>\"$webhook_result_1.response.result.frase\"</em><br><br><strong>$webhook_result_1.response.result.autor</strong><br><br>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620688305967",
+      "disabled": true,
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_2_1620960800791",
+      "previous_sibling": "node_1_1621029885523"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_6_1621030019271",
+      "conditions": "anything_else",
+      "dialog_node": "response_2_1621030150977",
+      "previous_sibling": "response_8_1621030149735"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<br>Previsão para os próximos 7 dias em <strong>Florianópolis</strong>:<br><br> <ul>     <li>$webhook_result_3.response.result.forecasts.a</li>     <li>$webhook_result_3.response.result.forecasts.b</li>     <li>$webhook_result_3.response.result.forecasts.c</li>     <li>$webhook_result_3.response.result.forecasts.d</li>     <li>$webhook_result_3.response.result.forecasts.e</li>     <li>$webhook_result_3.response.result.forecasts.f</li>     <li>$webhook_result_3.response.result.forecasts.g</li> </ul> <br><em>Previsão por: <a href=\"https://openweathermap.org/\">OpenWeather</a> ®</em><br><br>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1621039642267",
+      "conditions": "$webhook_result_3",
+      "dialog_node": "response_2_1621039642269"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Oops, não estou encontrando meus livros hoje :/"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1620688305967",
+      "disabled": true,
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1620960801910",
+      "previous_sibling": "response_2_1620960800791"
+    },
+    {
+      "type": "response_condition",
+      "output": {},
+      "parent": "node_1_1621039642267",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1621039642269",
+      "previous_sibling": "response_2_1621039642269"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620685115178",
+      "disabled": true,
+      "dialog_node": "response_4_1620686718960"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito obrigado pela preferência! Voe bem, Voe Andorinha! <br><br><em>\"$webhook_result_2.response.result.frase\"</em><br><br><strong>$webhook_result_2.response.result.autor</strong><br><br>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1620957612528",
+      "conditions": "$webhook_result_2",
+      "dialog_node": "response_4_1620966558703"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1620252459169",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1620252226799"
+      },
+      "conditions": "#consultar_precos",
+      "dialog_node": "response_5_1620254517008",
+      "previous_sibling": "response_8_1620254510434"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1620252459169",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1620688305967"
+      },
+      "conditions": "#consultar_previsao",
+      "dialog_node": "response_5_1620687694963",
+      "previous_sibling": "response_5_1620254517008"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<br>Previsão para os próximos 7 dias em <strong>Porto Alegre</strong>:<br><br> <ul>     <li>$webhook_result_3.response.result.forecasts.a</li>     <li>$webhook_result_3.response.result.forecasts.b</li>     <li>$webhook_result_3.response.result.forecasts.c</li>     <li>$webhook_result_3.response.result.forecasts.d</li>     <li>$webhook_result_3.response.result.forecasts.e</li>     <li>$webhook_result_3.response.result.forecasts.f</li>     <li>$webhook_result_3.response.result.forecasts.g</li> </ul> <br><em>Previsão por: <a href=\"https://openweathermap.org/\">OpenWeather</a> ®</em><br><br>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1621039697351",
+      "conditions": "$webhook_result_3",
+      "dialog_node": "response_5_1621039697361"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1621039697351",
+      "conditions": "anything_else",
+      "dialog_node": "response_6_1621039697361",
+      "previous_sibling": "response_5_1621039697361"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_3_1620957612528",
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1620966560646",
+      "previous_sibling": "response_4_1620966558703"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1620252459169",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Em outros casos"
+      },
+      "conditions": "#reservar_voo",
+      "dialog_node": "response_8_1620253982612"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1620252459169",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620252198032"
+      },
+      "conditions": "#consultar_destinos",
+      "dialog_node": "response_8_1620254510434",
+      "previous_sibling": "response_8_1620253982612"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<br>Previsão para os próximos 7 dias em <strong>Curitiba</strong>:<br><br> <ul>     <li>$webhook_result_3.response.result.forecasts.a</li>     <li>$webhook_result_3.response.result.forecasts.b</li>     <li>$webhook_result_3.response.result.forecasts.c</li>     <li>$webhook_result_3.response.result.forecasts.d</li>     <li>$webhook_result_3.response.result.forecasts.e</li>     <li>$webhook_result_3.response.result.forecasts.f</li>     <li>$webhook_result_3.response.result.forecasts.g</li> </ul> <br><em>Previsão por: <a href=\"https://openweathermap.org/\">OpenWeather</a> ®</em><br><br>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1621030019271",
+      "conditions": "$webhook_result_3",
+      "dialog_node": "response_8_1621030149735"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok. Você sairá de <strong>Curitiba</strong> então, correto?!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Em outros casos",
+      "disabled": true,
+      "conditions": "@curitiba",
+      "dialog_node": "response_9_1620253550143",
+      "previous_sibling": "node_6_1620696985630"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "airline-reservation",
+  "language": "pt-br",
+  "description": "Skill para reserva de passagens aéreas"
+}
